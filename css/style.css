@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito:400,700,300);
+/*@import (906_12_col.css);*/
 
 body {
 	background-image: url("../images/HTG_2013_Youtube_template2-10.jpg");
@@ -7,7 +8,7 @@ body {
 	margin-top: 0px;
 }
 
-container {
+.container {
   margin-left: auto;
   margin-right: auto;
   min-width: 960px;
@@ -24,7 +25,6 @@ container {
   margin-right: 10px;
 }
 
-
 .container .grid_3 {
   width: 220px;
 }
@@ -33,10 +33,9 @@ container {
   width: 700px;
 }
 
-.container .grid_12 {
-  width: 940px;
+.container_12 {
+  width: 960px;
 }
-
 
 p {
 	color: black;
