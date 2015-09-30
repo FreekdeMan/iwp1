@@ -1,7 +1,7 @@
 <?php
 
 $password = "1234";
-myHashing($password, "sa1");
+myHashing($password, "sha1");
      
 
 /**

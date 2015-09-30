@@ -1,5 +1,4 @@
 <?php
-//$current_date = date_create(07-01-1982);
 $current_date = new DateTime("07/01/1982");
         
 formatDate($current_date);
