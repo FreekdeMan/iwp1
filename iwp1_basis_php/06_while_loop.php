@@ -9,4 +9,7 @@ while ($i<=$max) {
   echo "{$i} x {$table} = {$result}<br>";
   $i += 1;
 };
+
+include_once 'show_code.php'; 
+showSource(__FILE__);
 ?>

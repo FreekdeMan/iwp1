@@ -24,5 +24,8 @@ function randomImage($afbeeldingen_array){
     echo "<a href=\"../$current_image[2]\"> <img src=\"images/$current_image[0]\" alt=\"$current_image[1]\"></a>";
 }
 
+include_once 'show_code.php'; 
+showSource(__FILE__);
+
 ?>
 

@@ -22,5 +22,8 @@ function myHashing($input, $hash_function){
         echo "The encription function is not properly set.";
     }
 }
+
+include_once 'show_code.php'; 
+showSource(__FILE__);
 ?>
 

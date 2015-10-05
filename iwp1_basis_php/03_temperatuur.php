@@ -10,5 +10,8 @@ elseif ($temperatuur < 30)
     echo "Prima weer!";
 else
     echo 'Heet!';
+
+include_once 'show_code.php'; 
+showSource(__FILE__);
 ?>
 

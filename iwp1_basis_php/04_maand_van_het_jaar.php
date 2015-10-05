@@ -42,4 +42,7 @@
         default:
             echo "This month does not exist";
     }
+    
+    include_once 'show_code.php'; 
+    showSource(__FILE__);
 ?>

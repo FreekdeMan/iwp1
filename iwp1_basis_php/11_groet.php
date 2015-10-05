@@ -19,4 +19,7 @@ function greeting(){
         echo "Goedenavond";
     }
 }
+
+include_once 'show_code.php'; 
+showSource(__FILE__);
 ?>

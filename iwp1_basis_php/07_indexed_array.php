@@ -11,5 +11,8 @@
     
     $dagnummer = 2;
     
-    echo "Het is vandaag {$dagen[$dagnummer]}"
+    echo "Het is vandaag {$dagen[$dagnummer]}";
+    
+    include_once 'show_code.php'; 
+    showSource(__FILE__);
 ?>

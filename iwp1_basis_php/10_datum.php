@@ -10,5 +10,8 @@ formatDate($current_date);
 function formatDate($date){
     echo date_format($date, 'd-m-Y');
 }
+
+include_once 'show_code.php'; 
+showSource(__FILE__);
 ?>
 

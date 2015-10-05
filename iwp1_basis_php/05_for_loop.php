@@ -18,5 +18,8 @@
         $size = 500 - (50*($i-1));
         $letter = $hello_world[$i-1];
         echo "<p style=\"font-size:{$size}%\">$letter</font>";
-    }    
+    }
+    
+    include_once 'show_code.php'; 
+    showSource(__FILE__);
 ?>

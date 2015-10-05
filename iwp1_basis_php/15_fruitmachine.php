@@ -64,3 +64,8 @@ function areValuesEqual($letters){
     </body>
 </html>
 
+<?php
+include_once 'show_code.php'; 
+showSource(__FILE__);
+?>
+

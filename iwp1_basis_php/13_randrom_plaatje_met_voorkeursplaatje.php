@@ -49,5 +49,8 @@ function randomImage(array $afbeeldingen){
 function custom_sort ($value_a, $value_b){
     return $value_a[3]>$value_b[3];
 }
+
+include_once 'show_code.php'; 
+showSource(__FILE__);
 ?>
 

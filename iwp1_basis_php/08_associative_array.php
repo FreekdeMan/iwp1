@@ -55,5 +55,8 @@
         return $array[$key] = $value;
     }
     
+    include_once 'show_code.php'; 
+    showSource(__FILE__);
+    
     
 ?>
