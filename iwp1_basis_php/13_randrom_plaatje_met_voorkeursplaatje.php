@@ -30,7 +30,7 @@ function randomImage(array $afbeeldingen){
     foreach ($afbeeldingen as $key => $value) {
         $random_value -= $value[3];
         if ($random_value < 0){
-            echo "<a href=\"../$value[2]\"> <img src=\"images/$value[0]\" alt=$value[1]></a>";
+            echo "<a href=\"../$value[2]\"> <img src=\"images/$value[0]\" alt=\"$value[1]\"></a>";
             break;
         }
     }

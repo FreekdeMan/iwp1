@@ -42,6 +42,6 @@ function randomImage($images){
     $random_value = mt_rand(0, $array_length-1);
     $current_image = $images[$random_value];
     
-    echo "<a href=\"../$current_image[2]\"> <img src=\"images/$current_image[0]\" alt=$current_image[1]></a>";
+    echo "<a href=\"../$current_image[2]\"> <img src=\"images/$current_image[0]\" alt=\"$current_image[1]\"></a>";
 }
 ?>
