@@ -1,24 +1,26 @@
 <?php
 
-$generatedLetters = [];
+$generatedImages = [];
 
 /**
  * 
  * @return string Random letter that is generated from an array.
  */
-function randomLetter() {
-    $letters = ["A", "B", "C"];
-    $rnd_letter =  $letters[mt_rand(0, count($letters)-1)];
-    return $rnd_letter;
+function randomImage() {
+    $images = [ "<img src='images/fruitmachine1.jpg' alt='Star'>", 
+                "<img src='images/fruitmachine2.jpg' alt='Seven'>", 
+                "<img src='images/fruitmachine3.jpg' alt='Bell'>"];
+    $rnd_image =  $images[mt_rand(0, count($images)-1)];
+    return $rnd_image;
 }
 
 /**
- * Check if the letters from the fruitmachine are equal. 
- * If the letters are equal --> Output Jackpot!
- * @param type $letters the letters from the fruitmachine
+ * Check if the images from the fruitmachine are equal. 
+ * If the images are equal --> Output Jackpot!
+ * @param type $images the letters from the fruitmachine
  */
-function areValuesEqual($letters){
-    if (count(array_unique($letters)) == 1) {
+function areValuesEqual($images){
+    if (count(array_unique($images)) == 1) {
         echo "<p class='jackpot'>Jackpot!!</p>";
     }
 }
@@ -54,11 +56,11 @@ function areValuesEqual($letters){
             <h1>Fruitmachine</h1>
             <?php 
             for ($i = 1; $i <= 3; $i++){
-                $randomLetter = randomLetter();
-                echo "<div class='letter'>". $randomLetter ."</div>";
-                array_push($generatedLetters, $randomLetter);
+                $randomImage = randomImage();
+                echo "<div class='letter'>". $randomImage ."</div>";
+                array_push($generatedImages, $randomImage);
                 }
-            areValuesEqual($generatedLetters);                
+            areValuesEqual($generatedImages);
             ?>
         </div>       
     </body>

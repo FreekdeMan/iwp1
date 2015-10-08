@@ -7,7 +7,6 @@
 </style>
 
 <?php
-
 echo "<h3>Hier volgt mijn php broncode</h3>";
 
 
