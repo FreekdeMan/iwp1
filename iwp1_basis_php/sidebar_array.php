@@ -24,6 +24,7 @@ function sidebar_array(){
         array("text" => "Cookie achtergrondkleur", "url" => "20_cookie_achtergrondkleur.php"),
         array("text" => "Aanmelden nieuwsbrief", "url" => "21_aanmelden_nieuwsbrief.php"),
         array("text" => "Plaatje uploaden", "url" => "22_plaatje_uploaden.php"),
+        array("text" => "Meerdere plaatjes uploaden", "url" => "23_meerdere_plaatjes_uploaden.php"),
         array("text" => "Classes", "url" => "27_wie.php"),
     );
     
