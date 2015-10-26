@@ -34,7 +34,10 @@ if (isset($_POST["upload"])){
         # If there is an error, do not upload the file. 
         if (!$error){
             $result = move_uploaded_file($_FILES['fotos']['tmp_name'][$i], $path_name);
+            # Show the filename on the screen.
             echo $foto . " is uploaded to the server. <br>";
+            # Show the uploaded image on the screen. 
+            echo "<img src='" . $path_name . "' height='100'>";
             $succesful_uploads += 1;
         }
         else {
@@ -52,7 +55,7 @@ if (isset($_POST["upload"])){
         echo "One file has been uploaded successfully.<br>";
     }
     else {
-        echo $succesful_uploads . " have been uploaded successfully.<br>";
+        echo $succesful_uploads . " files have been uploaded successfully.<br>";
     }
 
     echo "<br>";
