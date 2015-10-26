@@ -1,7 +1,8 @@
+<?php ob_start(); ?>
+
 <style>
     p {
         display: inline;
-        /*font-size: 10px;*/
     }
 </style>
 
@@ -20,6 +21,11 @@
         echo "<p style=\"font-size:{$size}%\">$letter</font>";
     }
     
-    include_once 'show_code.php'; 
-    showSource(__FILE__);
+    $the_title = "Week 4: For Loop";
+    $the_content = ob_get_clean();
+    $show_source = array("05_for_loop.php" => __FILE__);
+    include "sidebar_array.php";
+    $sidebar_array = sidebar_array();
 ?>
+
+<?php include("../single.php"); ?>

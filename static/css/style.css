@@ -1,0 +1,108 @@
+body {
+    background-color: #FBFBFB;
+    border-style: solid;
+    margin: 0px;
+    border-width: 80px 0px 30px 0px;
+}
+
+h1 {
+    
+}
+
+p {
+    
+}
+
+head {
+    
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 960px;
+  width: 960px;
+  /*background-color: white;*/
+}
+
+.grid_3,
+.grid_9,
+.grid_12 {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.container .grid_3 {
+  width: 220px;
+}
+
+.container .grid_9 {
+  width: 700px;
+}
+
+.container_12 {
+  width: 960px;
+}
+
+#wrap {
+    
+}
+
+#header {
+    color: black;
+    font-family: Arial;
+    padding: 15px 50px 20px;
+}
+
+#sidebar {
+    
+}
+
+#footer {
+    font-size: 12px;
+    background-color: #E3E3E3;
+    text-align: center;
+    clear: both;
+    padding: 5px 0px 5px 0px;
+    margin-top: 20px;
+}
+
+#navigation {
+    
+}
+
+#main_content {
+    float: left;
+    clear: none;
+    text-align: justify;
+}
+
+.main_nav {
+    background-color: black;
+    padding: 20px 0px 20px 50px;
+}
+
+.main_nav li{
+    display: inline;
+    margin: 0px 20px 0px 0px;
+}
+
+.main_nav a {
+    color: #FBFBFB;
+    font-family: Arial;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.sidebar_nav {
+    
+}
+
+.footer_half {
+    
+}
+.footer_half t_align_right {
+    
+}

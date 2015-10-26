@@ -1,9 +1,9 @@
 <?php
+ob_start();
 
 $generatedLetters = [];
 
 /**
- * 
  * @return string Random letter that is generated from an array.
  */
 function randomLetter() {
@@ -24,48 +24,41 @@ function areValuesEqual($letters){
 }
 ?>
 
-<html>
-    <style>
-        .container {
-            margin-left: auto;
-            margin-right: auto;
-            width: 800px;
-            text-align: center;
-        }
-        
-        .letter {
-            display: inline;
-            font-size: 50;
-            color: red;
-        }
-        .jackpot {
-            font-size: 100;
-            color: #B16205;
-        }
+<style>
+    .letters {
+        text-align: center;        
+    }
+    
+    .letter {
+        display: inline;
+        font-size: 80px;
+        color: red;
+    }
+    .jackpot {
+        font-size: 100px;
+        color: #B16205;
+        margin: 10px;
+    }
+</style>
 
-    </style>
-    <head>
-        <title>Fruitmachine</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div class="container">
-            <h1>Fruitmachine</h1>
-            <?php 
-            for ($i = 1; $i <= 3; $i++){
-                $randomLetter = randomLetter();
-                echo "<div class='letter'>". $randomLetter ."</div>";
-                array_push($generatedLetters, $randomLetter);
-                }
-            areValuesEqual($generatedLetters);                
-            ?>
-        </div>       
-    </body>
-</html> 
+<?php 
+echo "<div class=letters>";
+for ($i = 1; $i <= 3; $i++){
+    $randomLetter = randomLetter();
+    echo "<div class='letter'>" . $randomLetter . "</div>";
+    array_push($generatedLetters, $randomLetter);
+    }
+areValuesEqual($generatedLetters); 
+echo "</div>";
+?>
 
 <?php
-include_once 'show_code.php'; 
-showSource(__FILE__);
+    $the_title = "Week 6: Fruitmachine";
+    $the_content = ob_get_clean();
+    $show_source = array("15_fruitmachine.php" => __FILE__);
+    include "sidebar_array.php";
+    $sidebar_array = sidebar_array();
 ?>
+
+<?php include("../single.php"); ?>
 

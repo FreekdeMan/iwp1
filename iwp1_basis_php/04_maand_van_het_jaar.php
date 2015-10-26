@@ -1,4 +1,6 @@
 <?php
+ob_start();
+
     date_default_timezone_set('UTC');
     $this_month = date("n");
     
@@ -43,6 +45,11 @@
             echo "This month does not exist";
     }
     
-    include_once 'show_code.php'; 
-    showSource(__FILE__);
+ $the_title = "Week 4: Maand van het jaar";
+    $the_content = ob_get_clean();
+    $show_source = array("04_maand van het jaar.php" => __FILE__);
+    include "sidebar_array.php";
+    $sidebar_array = sidebar_array();
 ?>
+
+<?php include("../single.php"); ?>

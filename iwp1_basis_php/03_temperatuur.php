@@ -1,4 +1,6 @@
 <?php
+ob_start();
+
 $temperatuur = -273.20;
 if ($temperatuur < -273.15)
     echo "Dat kan niet!";
@@ -11,7 +13,11 @@ elseif ($temperatuur < 30)
 else
     echo 'Heet!';
 
-include_once 'show_code.php'; 
-showSource(__FILE__);
+ $the_title = "Week 4: Temperatuur";
+    $the_content = ob_get_clean();
+    $show_source = array("01_temperatuur.php" => __FILE__);
+    include "sidebar_array.php";
+    $sidebar_array = sidebar_array();
 ?>
 
+<?php include("../single.php"); ?>

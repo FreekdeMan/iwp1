@@ -1,4 +1,5 @@
 <?php
+ob_start();
 
 greeting();
 
@@ -20,6 +21,11 @@ function greeting(){
     }
 }
 
-include_once 'show_code.php'; 
-showSource(__FILE__);
+    $the_title = "Week 4: Groet";
+    $the_content = ob_get_clean();
+    $show_source = array("11_groet.php" => __FILE__);
+    include "sidebar_array.php";
+    $sidebar_array = sidebar_array();
 ?>
+
+<?php include("../single.php"); ?>

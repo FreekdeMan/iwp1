@@ -1,9 +1,9 @@
 <?php
+ob_start();
 
 $generatedImages = [];
 
 /**
- * 
  * @return string Random letter that is generated from an array.
  */
 function randomImage() {
@@ -26,48 +26,38 @@ function areValuesEqual($images){
 }
 ?>
 
-<html>
-    <style>
-        .container {
-            margin-left: auto;
-            margin-right: auto;
-            width: 800px;
-            text-align: center;
-        }
+<style>
+    .letters {
+        text-align: center;        
+    }
+    
+    .image {
+        display: inline;
+    }
+    .jackpot {
+        font-size: 100px;
+        color: #B16205;
+        margin: 10px;
+    }
+</style>
         
-        .letter {
-            display: inline;
-            font-size: 50;
-            color: red;
-        }
-        .jackpot {
-            font-size: 100;
-            color: #B16205;
-        }
+<?php 
 
-    </style>
-    <head>
-        <title>Fruitmachine</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div class="container">
-            <h1>Fruitmachine</h1>
-            <?php 
-            for ($i = 1; $i <= 3; $i++){
-                $randomImage = randomImage();
-                echo "<div class='letter'>". $randomImage ."</div>";
-                array_push($generatedImages, $randomImage);
-                }
-            areValuesEqual($generatedImages);
-            ?>
-        </div>       
-    </body>
-</html> 
+echo "<div class=letters>";
+for ($i = 1; $i <= 3; $i++){
+    $randomImage = randomImage();
+    echo "<div class='image'>". $randomImage ."</div>";
+    array_push($generatedImages, $randomImage);
+    }
+areValuesEqual($generatedImages);
 
-<?php
-include_once 'show_code.php'; 
-showSource(__FILE__);
+echo "</div>";
+
+$the_title = "Week 6: Fruitmachine met afbeeldingen";
+$the_content = ob_get_clean();
+$show_source = array("16_fruitmachine_afbeeldingen.php" => __FILE__);
+    include "sidebar_array.php";
+    $sidebar_array = sidebar_array();
 ?>
 
+<?php include("../single.php"); ?>

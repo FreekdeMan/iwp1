@@ -1,4 +1,6 @@
 <?php
+ob_start();
+
     $prijs = array (
         "Black & Decker Accuboormachine" => 148.85,
         "Bosch Boorhamer" => 103.97,
@@ -55,8 +57,11 @@
         return $array[$key] = $value;
     }
     
-    include_once 'show_code.php'; 
-    showSource(__FILE__);
-    
-    
+    $the_title = "Week 4: Associative array";
+    $the_content = ob_get_clean();
+    $show_source = array("08_associative_array" => __FILE__);
+    include "sidebar_array.php";
+    $sidebar_array = sidebar_array();
 ?>
+
+<?php include("../single.php"); ?>

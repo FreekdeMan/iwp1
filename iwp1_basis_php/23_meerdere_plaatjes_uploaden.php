@@ -28,8 +28,8 @@ if (isset($_POST["upload"])){
 $the_title = "Week 7: Plaatje uploaden";
 $the_content = ob_get_clean();
 $show_source = array("22_plaatje_uploaden.php" => __FILE__);
-    include "sidebar_array.php";
-    $sidebar_array = sidebar_array();
+include "sidebar_array.php";
+$sidebar_array = sidebar_array();
 ?>
 
 <?php include("../single.php"); ?>

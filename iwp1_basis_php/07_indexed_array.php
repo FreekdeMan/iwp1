@@ -1,4 +1,6 @@
 <?php
+ob_start();
+
     $dagen = array(
         "Zondag",
         "Maandag",
@@ -13,6 +15,11 @@
     
     echo "Het is vandaag {$dagen[$dagnummer]}";
     
-    include_once 'show_code.php'; 
-    showSource(__FILE__);
+    $the_title = "Week 4: Indexed array";
+    $the_content = ob_get_clean();
+    $show_source = array("07_indexed_array.php" => __FILE__);
+    include "sidebar_array.php";
+    $sidebar_array = sidebar_array();
 ?>
+
+<?php include("../single.php"); ?>

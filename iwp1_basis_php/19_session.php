@@ -1,4 +1,5 @@
 <?php
+ob_start();
 
 ini_set('display_errors', '1');
 
@@ -11,30 +12,27 @@ if(isset($_SESSION["phpsession"])){
         // Increase the session value with 1.
         $_SESSION["phpsession"] = $current_value + 1;
         $_SESSION["last_visit"] = date("d-m-Y");
-        echo "if";
     }
     else{
-        // If this is the first time the page with the cookie is loaded, set the value to 1.
+        // If this is the first time the page with the cookie is loaded, 
+        // set the value to 1.
         $_SESSION["phpsession"] = 1;
         $_SESSION["last_visit"] = date("d-m-Y");
-        echo "else";
     }
 ?>
 
-<html>
-    <head>
-        <title>Session pagina</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <p>Aantal malen pagina met session opnieuw geladen: <?php echo $_SESSION["phpsession"] ?></p>
-        <p>Laatste keer op deze pagina ingelogd: <?php echo $_SESSION["last_visit"] ?></p>
-    </body>
-</html>
+<p>Aantal malen pagina met session opnieuw geladen: 
+    <?php echo $_SESSION["phpsession"] ?></p>
+<p>Laatste keer op deze pagina ingelogd: 
+    <?php echo $_SESSION["last_visit"] ?></p>
 
 <?php
-include_once 'show_code.php'; 
-showSource(__FILE__);
+    $the_title = "Week 6: Sessions";
+    $the_content = ob_get_clean();
+    $show_source = array("19_session.php" => __FILE__);
+    include "sidebar_array.php";
+    $sidebar_array = sidebar_array();
 ?>
+
+<?php include("../single.php"); ?>
 

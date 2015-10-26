@@ -9,21 +9,17 @@
     }
 ?>
 
-<html>
-    <head>
-        <title>Cookie pagina</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <p>
-            Aantal malen pagina met cookie opnieuw geladen: <?php echo $_COOKIE["phpcookie"] ?>
-        </p>
-    </body>
-</html>
+<p>
+    De pagina is op dit moment <?php echo $_COOKIE["phpcookie"] ?> keer geladen.
+</p>
 
 <?php
-include_once 'show_code.php'; 
-showSource(__FILE__);
+    $the_title = "Week 6: Cookie";
+    $the_content = ob_get_clean();
+    $show_source = array("18_cookie.php" => __FILE__);
+    include "sidebar_array.php";
+    $sidebar_array = sidebar_array();
 ?>
+
+<?php include("../single.php"); ?>
 
