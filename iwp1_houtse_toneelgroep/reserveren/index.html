@@ -1,44 +1,52 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Toneel.nl</title>
         <link href="../css/style.css" type="text/css" rel="stylesheet" />
-        <meta charset="UTF-8">
-		<meta name="description" content="Introductie Houtse Toneelgroep">
-		<meta name="keywords" content="toneel, houtse toneelgroep">
-		<meta name="author" content="Johan Vergeer">
+        <meta charset="UTF-8"/>
+        <meta name="description" content="Introductie Houtse Toneelgroep"/>
+        <meta name="keywords" content="toneel, houtse toneelgroep"/>
+        <meta name="author" content="Johan Vergeer"/>
     </head>
     <body>
     	<div class="container">
-	   		<div class="header_fixed">
-		   		<h1 id="header">HOUTSE TONEELGROEP</h1>
-		   		
-		   		<div class="menu">
-			   		<ul>
-		   				<li><a href="../index.html">Home</a></li>
-		   				<li><a href="../actueel">Actueel</a></li>
-		   				<li><a href="../contact">Contact</a></li>
-		   				<li><a href="../reserveren">Reserveren</a></li>
-		   				<li><a href="../toneelspelen">Toneelspelen?</a></li>
-		   			</ul>
-		   		</div>
+            <div class="header_fixed">
+                <h1 id="header">HOUTSE TONEELGROEP</h1>
 
-	   		</div>
-   			
-   			<div id="main_content" class="grid_9">
-   				<h1>Reserveren</h1>
-   				<p>Hier komt een formulier voor het plaatsen van reserveringen.</p>
-   			</div>
-   			
-   			<div id="sidebar" class="grid_3">
-   				<p>sidebar content</p>
-   			</div>
-   			
-   			<div id="footer">
-   				<p class="text-align-middle">&copy; 2015 <a href="http://www.houtsetoneelgroep.nl" target="_blank">Houtse Toneelgroep</a> | Cederhoutstraat 44, 5706 XC, Helmond</p>
-   			</div>
-	      </div>
-       </body>
+                <div class="menu">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../actueel">Actueel</a></li>
+                        <li><a href="../contact">Contact</a></li>
+                        <li><a href="../reserveren">Reserveren</a></li>
+                        <li><a href="../toneelspelen">Toneelspelen?</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="main_content" class="grid_12">
+                <h1>Reserveringsformulier</h1>
+                <div class="reservation_form">
+                    <p>Vul onderstaand formulier in om een reservering te plaatsen voor Ketchup & Sangria.</p>
+                    <form action="#">
+                        <p><label>Naam:</label><input type="text" name="naam" maxlength="30" required/></p>
+                        <p><label>email:</label><input type="email" name="email" maxlength="30" required/></p>
+                        <p><label>tel:</label><input type="tel" name="tel" maxlength="30"/></p>
+                        <h3>Welke tijd wilt u reserveren?</h3>
+                        <p><input type="radio" name="reservation" value="10-10" class="radio" required><label class="label">Zaterdag 10 oktober om 20.00 uur</label></p>
+                        <p><input type="radio" name="reservation" value="11-10" class="radio" required><label class="label">Zondag 11 oktober om 14.00 uur</label></p>
+                        <p><input type="radio" name="reservation" value="17-10" class="radio" required><label class="label">Zaterdag 17 oktober om 20.00 uur</label></p>
+                        <br/>
+                        <p><label>bericht:</label><textarea name="comments">Plaats hier eventuele opmerkingen... </textarea></p>
+                        <p><input id="submit_button" type="submit" value="Verstuur" /></p>							
+                    </form>
+                </div>
+            </div>
+
+            <div id="footer">
+                <p class="text-align-middle">&copy; 2015 <a href="http://www.houtsetoneelgroep.nl" target="_blank">Houtse Toneelgroep</a> | Cederhoutstraat 44, 5706 XC, Helmond</p>
+            </div>
+        </div>
+    </body>
 </html>

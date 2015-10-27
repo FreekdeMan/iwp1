@@ -1,15 +1,18 @@
 <?php
 if (!class_exists("DemoThemeMethods")) {
     class DemoThemeMethods {
+        /**
+         * 
+         * @param type $items_array An array of items to put into the menu
+         * @param type $class A css class
+         * @return <ul> of all the items in the sidebar array with hyperlinks.
+         */
         public function navigation($items_array, $class) {
-            $nav = '<ul class="' . $class . '">';
-            
+            $nav = '<ul class="' . $class . '">';            
             foreach ($items_array as $item) {
                 $nav .= '<li><a href="' . $item['url'] . '">' . $item['text'] . '</a></li>';
-            }
-            
-            $nav .= "</ul>";
-            
+            }            
+            $nav .= "</ul>";            
             return $nav;
         }
     }

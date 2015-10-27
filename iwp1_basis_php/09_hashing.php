@@ -1,6 +1,4 @@
 <?php
-ob_start();
-
 $password = "1234";
 myHashing($password, "sha1");
      
@@ -26,11 +24,24 @@ function myHashing($input, $hash_function){
     }
 }
 
-    $the_title = "Week 5: Hashing";
-    $the_content = ob_get_clean();
-    $show_source = array("09_hashing.php" => __FILE__);
-    include "sidebar_array.php";
-    $sidebar_array = sidebar_array();
+# Template data
+$the_title = "Week 5: Hashing";
+$the_content = ob_get_clean();
+$show_source = array("09_hashing.php" => __FILE__);
+include "sidebar_array.php";
+$sidebar_array = sidebar_array();
+$sidebar_header = "Opdrachten PHP";
+$assignment_description = "
+    <p>Met hashing kun je een String versleutelen. Uit de verkregen hash code 
+    kan de oorspronkelijke gegevens niet meer terug worden gehaald. 
+    Schrijf een functie <strong>myHashing</strong> die een wachtwoord versleuteld met de 
+    PHP functie md5() of shal(). Zoek op hoe deze twee functies werken op 
+    <a href='http://www.php.net'>www.php.net</a> of 
+    <a href='http://www.w3schools.com/php'>www.w3schools.com/php</a>. De functie krijgt 2 
+    argumenten mee (wachtwoord en type hashing) en retourneert een 
+    MD5 hash of een SHAI hash. De aanroep van de functie kan er als volgt 
+    uitzien: </p>
+    <p><strong>myHashing ('wachtwoord','MD5'); </strong></p>";
 ?>
 
 <?php include("../single.php"); ?>

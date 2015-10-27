@@ -8,15 +8,24 @@
             <?php include("header.php"); ?>
             
             <!-- Page main content-->
-            <div id="main_content" <?php if (!$sidebar_array) {echo 'class="container_12"';} else {echo 'class="grid_9"';} ?> >
+            <div id="main_content" <?php if (!$sidebar_array) 
+                {echo 'class="container_12"';} else {echo 'class="grid_9"';} ?> >
                 <h1><?php echo $the_title; ?></h1>
+                <br/>
                 <?php echo $the_content; ?> 
                 <br/>
+                <?php if ($assignment_description){ 
+                    echo "<hr/>";
+                    echo "<h1>Omschrijving opdracht</h1>";
+                    echo $assignment_description;
+                }?>
                 <hr/>
-                <h1>Broncode</h1>
-                <?php show_source_code($show_source); ?>
-                <br/>
-                <br/>
+                <?php if ($show_source){ ?>
+                   <h1>Broncode</h1>
+                    <?php show_source_code($show_source); ?>
+                    <br/>
+                    <br/> 
+                <?php }  ?>
             </div>
             
             <!-- Page sidebar -->

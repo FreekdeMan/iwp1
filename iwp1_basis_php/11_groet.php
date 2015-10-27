@@ -1,6 +1,4 @@
 <?php
-ob_start();
-
 greeting();
 
 /**
@@ -21,11 +19,16 @@ function greeting(){
     }
 }
 
-    $the_title = "Week 4: Groet";
-    $the_content = ob_get_clean();
-    $show_source = array("11_groet.php" => __FILE__);
-    include "sidebar_array.php";
-    $sidebar_array = sidebar_array();
+# Template data
+$the_title = "Week 4: Groet";
+$the_content = ob_get_clean();
+$show_source = array("11_groet.php" => __FILE__);
+include "sidebar_array.php";
+$sidebar_array = sidebar_array();
+$sidebar_header = "Opdrachten PHP";
+$assignment_description = "
+    <p>Schrijf een functie die afhankelijk van de huidige tijd een van de 
+    volgende groeten teruggeeft: goede morgen, goede middag of goede avond. </p>";
 ?>
 
 <?php include("../single.php"); ?>

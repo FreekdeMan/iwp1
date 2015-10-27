@@ -1,30 +1,31 @@
 <?php
 include("includes/class_theme_methods.php");
 
-/*
- * Header navigatie menu
+/**
+ * 
+ * @global type $dtm
+ * @return type Main navigation based on array
  */
 function do_main_nav(){
-    global $dtm;
-    
+    global $dtm;    
     $class = "main_nav";
     
     $items_array = array (
         array("text" => "Home", "url" => "index.php"),
-//        array("text" => "About", "url" => "about.php")
     );
     
     return $dtm->navigation($items_array, $class);
 }
 
-/*
- * Sidebar navigatie menu
+/**
+ * 
+ * @global type $dtm
+ * @param type $sidebar_array
+ * @return type Main navigation based on array. 
  */
 function do_sidebar_nav($sidebar_array){
-    global $dtm;
-    
-    $class = "sidebar_nav";  
-    
+    global $dtm;    
+    $class = "sidebar_nav";      
     return $dtm->navigation($sidebar_array, $class);
 }
 

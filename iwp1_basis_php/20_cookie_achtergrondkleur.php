@@ -1,7 +1,5 @@
 <?php
-ob_start();
-
-if(isset($_COOKIE["color"])){
+if (isset($_COOKIE["color"])){
     $new_color = $_GET["color"];
     $current_color = $_COOKIE["color"];
     if ($new_color != $current_color && $new_color != null) {
@@ -10,10 +8,10 @@ if(isset($_COOKIE["color"])){
     }else {
         $color = $current_color;
     }
-
-}else{
-    // If this is the first time the page with the cookie is loaded, 
-    // set the background color to white.
+}
+else{
+    # If this is the first time the page with the cookie is loaded, 
+    # set the background color to white.
     $color = "#fff";
     setcookie("color", $color, time() + 60*60*24*7);
 }
@@ -35,11 +33,21 @@ if(isset($_COOKIE["color"])){
 </form>       
 
 <?php
+# Template data
 $the_title = "Week 6: Achtergrondkleur instellen met cookie";
 $the_content = ob_get_clean();
 $show_source = array("20_cookie_achtergrondkleur.php" => __FILE__);
-    include "sidebar_array.php";
-    $sidebar_array = sidebar_array();
+include "sidebar_array.php";
+$sidebar_array = sidebar_array();
+$sidebar_header = "Opdrachten PHP";
+$assignment_description = "
+    <p>Maak een pagina met daarop een formulier waarmee de gebruiker een 
+    eigen achtergrondkleur kan instellen. Wanneer de knop \"Kleur instellen\" 
+    wordt geklikt, wordt de pagina opnieuw geladen met de gekozen 
+    achtergrondkleur. Gebruik PHP voor het inlezen van de kleur en stel de 
+    achtergrondkleur met behulp van CSS in. Zorg dat de achtergrondkleur 
+    opgeslagen wordt in een Cookie. Als de pagina nog eens bezocht wordt, 
+    dan wordt de pagina getoond met de eerder gekozen achtergrondkleur.</p> ";
 ?>
 
 <?php include("../single.php"); ?>

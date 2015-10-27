@@ -1,27 +1,27 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito:400,700,300);
 
 body {
-	background-image: url("../images/HTG_2013_Youtube_template2-10.jpg");
+    background-image: url("../images/HTG_2013_Youtube_template2-10.jpg");
     background-size: cover;
-	font-family: Arial, Helvetica, sans-serif;
-	margin-top: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 0px;
 }
 
 .container {
-  margin-left: auto;
-  margin-right: auto;
-  min-width: 960px;
-  width: 960px;
-  background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 960px;
+    width: 960px;
+    background-color: white;
 }
 
 .grid_3,
 .grid_9,
 .grid_12 {
-  display: inline;
-  float: left;
-  margin-left: 10px;
-  margin-right: 10px;
+    display: inline;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .container .grid_3 {
@@ -29,103 +29,218 @@ body {
 }
 
 .container .grid_9 {
-  width: 700px;
+    width: 700px;
+}
+.container .grid_12 {
+    width: 940px;
 }
 
 .container_12 {
-  width: 960px;
+    width: 960px;
 }
 
 p {
-	color: black;
-	font-size: 12px;
+    color: black;
+    font-size: 12px;
 }
 
 h1{
-	text-align: center;
+    text-align: center;
 }
 
 li {
-	font-size: 12px;
+    font-size: 12px;
+}
+
+/* Reservation form*/
+.reservation_form {
+    width: 400px;
+    margin: 0px auto;
+}
+
+.reservation_form p * {
+    vertical-align: top;
+}
+
+.reservation_form p>label {
+    display: inline-block;
+    width: 60px;
+}
+.reservation_form input, 
+.reservation_form textarea {
+    width: 300px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+.reservation_form .radio {
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+}
+
+.reservation_form .label {
+    width: 300px;
+    height: 20px;
+}
+.reservation_form textarea {
+    height: 200px;
+}
+
+/* Contact form */
+.contact_field {
+    margin-left: auto;
+    margin-right: auto;
+    width: 910px;
+    background-color: white;
+}
+
+.contact_field p {
+    font-size: 16px;
+    margin: 5px;
+}
+
+.contact_info {
+    float: left;
+    width: 300px;
+    margin-left: 100px;
+}
+
+.contact_info a {
+    color: blue;
+}
+
+.contact_form {
+    float: right;
+    width: 400px;
+    margin-right: 100px;
+    margin-bottom: 50px;
+}
+
+.contact_form p * {
+    vertical-align: top;
+}
+
+.contact_form p>label {
+    display: inline-block;
+    width: 60px;
+}
+.contact_form input, 
+.contact_form textarea {
+    width: 300px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+.contact_form .radio {
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+}
+
+.contact_form .label {
+    width: 300px;
+    height: 20px;
+}
+
+.contact_form textarea {
+    height: 200px;
+}
+
+.contact_field .maps {
+    width: 900px;
+    height: 450px;
+    border: #014664 solid thick;
+    margin: 0px 0px 20px 0px;
+    border-radius: 10px;
+}
+
+#submit_button {
+    background-color: #12B9FD;
+    border-radius: 20px;
+    font-size: 20px;
+    color: white;
+    width: 200px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 30px;
 }
 
 .header_fixed {
-	position: fixed;
-	margin-top: 0px;
-	width: inherit;
-	background-color: #21B9FD;
+    position: fixed;
+    margin-top: 0px;
+    width: inherit;
+    background-color: #21B9FD;
 }
 
-#header {
-	size: 30px;
-	color: black;
-	text-align: center;	
-	padding: 10px;
-	height: 30px;
-	font-family: Nunito;
-} 
-
 .menu {
-	height: 30px;
-	padding-bottom: 10px;
-	background-color: #014664; 
-	clear: both;
-	border-width: 1px 0px 1px 0px;
-	border-color: #643600;
-	border-style: solid;
+    height: 30px;
+    padding-bottom: 10px;
+    background-color: #014664; 
+    clear: both;
+    border-width: 1px 0px 1px 0px;
+    border-color: #643600;
+    border-style: solid;
 }
 
 .menu>ul {
-	list-style-type: none;
-	display: inline;
+    list-style-type: none;
+    display: inline;
 }
 
 .menu li {
-	font-size: 16px;
-	font-weight: bold;
-	float: left;
-	margin: 0px;
-	padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    float: left;
+    margin: 0px;
+    padding: 10px;
 }
 
 .menu li:hover {
-	background-color: #B16205;
+    background-color: #B16205;
 }
 
 .menu a {
-	color: white;
-	text-decoration: none;
-}
-
-#main_content {
-	float: left;
-	clear: none;
-	text-align: justify;
-	margin-top: 130px;
-}
-
-#sidebar {
-	float: right;
-	text-align: left;
-	clear: right;
-	margin-top: 130px
-}
-
-#footer {
-	font-size: 12px;
-	background-color: #E3E3E3;
- 	text-align: center;
-	clear: both;
-	padding: 5px 0px 5px 0px;
-	margin-top: 20px;
-}
-
-#footer a:hover{
-	text-decoration:underline;
+    color: white;
+    text-decoration: none;
 }
 
 .img_right_wrap {
-	float: right;
-	/*margin-top: 20px;*/
-	margin-left: 20px;
+    float: right;
+    margin-left: 20px;
+}
+
+#header {
+    color: black;
+    text-align: center;	
+    padding: 10px;
+    height: 30px;
+    font-family: Nunito;
+} 
+
+#main_content {
+    float: left;
+    clear: none;
+    text-align: justify;
+    margin-top: 130px;
+}
+
+#sidebar {
+    float: right;
+    text-align: left;
+    clear: right;
+    margin-top: 130px
+}
+
+#footer {
+    font-size: 12px;
+    background-color: #E3E3E3;
+    text-align: center;
+    clear: both;
+    padding: 5px 0px 5px 0px;
+    margin-top: 20px;
+}
+
+#footer a:hover{
+    text-decoration:underline;
 }

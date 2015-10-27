@@ -1,4 +1,5 @@
 body {
+    font-family: Arial,Helvetica Neue,Helvetica,sans-serif, Ubuntu;
     background-color: #FBFBFB;
     border-style: solid;
     margin: 0px;
@@ -10,7 +11,7 @@ h1 {
 }
 
 p {
-    
+    font-size: 16px;
 }
 
 head {
@@ -46,31 +47,18 @@ head {
   width: 960px;
 }
 
-#wrap {
-    
-}
-
 #header {
     color: black;
     font-family: Arial;
     padding: 15px 50px 20px;
 }
 
-#sidebar {
-    
-}
-
 #footer {
     font-size: 12px;
-    background-color: #E3E3E3;
     text-align: center;
     clear: both;
     padding: 5px 0px 5px 0px;
     margin-top: 20px;
-}
-
-#navigation {
-    
 }
 
 #main_content {
@@ -97,12 +85,14 @@ head {
 }
 
 .sidebar_nav {
-    
+    padding: 0px;
 }
 
-.footer_half {
-    
+.sidebar_nav a {
+    text-decoration: none;
+    color: blue;
 }
-.footer_half t_align_right {
-    
+
+.sidebar_nav li {
+    list-style-type: none;
 }
