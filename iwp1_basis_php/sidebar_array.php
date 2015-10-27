@@ -25,6 +25,8 @@ function sidebar_array(){
         array("text" => "Aanmelden nieuwsbrief", "url" => "21_aanmelden_nieuwsbrief.php"),
         array("text" => "Plaatje uploaden", "url" => "22_plaatje_uploaden.php"),
         array("text" => "Meerdere plaatjes uploaden", "url" => "23_meerdere_plaatjes_uploaden.php"),
+        array("text" => "Fotoviewer", "url" => "24_fotoviewer.php"),        
+        array("text" => "Fotoviewer met navigatie", "url" => "25_fotoviewer_navigatie.php"),
         array("text" => "Classes", "url" => "27_wie.php"),
     );
     
